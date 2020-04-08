@@ -11,7 +11,7 @@ package todo;
  */
 public class User {
     private String nom,prenom,login,mdp;
-
+private int id;
     public User() {
     }
 
@@ -22,8 +22,24 @@ public class User {
         this.mdp = mdp;
     }
 
+    public User(String nom, String prenom, String login, String mdp, int id) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.login = login;
+        this.mdp = mdp;
+        this.id = id;
+    }
+
     public String getNom() {
         return nom;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setNom(String nom) {

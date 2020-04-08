@@ -11,12 +11,28 @@ package todo;
  */
 public class Rappel {
  private  String titre,occasion,description,date;
-
+private int id;
     public Rappel(String titre, String occasion, String description, String date) {
         this.titre = titre;
         this.occasion = occasion;
         this.description = description;
         this.date = date;
+    }
+
+    public Rappel(String titre, String occasion, String description, String date, int id) {
+        this.titre = titre;
+        this.occasion = occasion;
+        this.description = description;
+        this.date = date;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitre() {
@@ -49,6 +65,11 @@ public class Rappel {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Rappel{" + "titre=" + titre + ", occasion=" + occasion + ", description=" + description + ", date=" + date + '}';
     }
    
 }

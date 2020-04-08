@@ -16,6 +16,8 @@ public class TODO {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        /*
+        
         User teste=new User("teste", "teste","teste","teste");
         User teste2=new User("teste2", "teste2","teste2","teste2");
         User admin=new User("admin","admin","admin","testeadmin");
@@ -26,7 +28,18 @@ public class TODO {
         u.lister();
         boolean b=u.connexion(admin);
         System.out.println(b);
+        */
+  /*      
+        Rappel r1=new Rappel("teste1","teste1","teste1", "teste1");
+        Rappel r2=new Rappel("teste2","teste2","teste2", "teste2");
+        Rappels r=new Rappels();
+        r.addrappel(r1);
+        r.addrappel(r2);
+        r.lister();
         
+        */
+  Connexions c=new Connexions();
+  
     }
     
 }
