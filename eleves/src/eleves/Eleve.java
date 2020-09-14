@@ -15,11 +15,23 @@ public class Eleve {
     private String nom;
     private ArrayList<Integer> listeNotes = new ArrayList<Integer>();
     private double moyenne;
-    
+        private static Eleve single_instance = null; 
+
     public Eleve(String nom) {
 	this.nom = nom;
     }
-    
+
+    private Eleve(String nom, double moyenne) {
+        this.nom = nom;
+        this.moyenne = moyenne;
+    }
+       public static Eleve getInstance(String nom, double moyenne) 
+    { 
+        if (single_instance == null) 
+            single_instance = new Eleve( nom,  moyenne); 
+  
+        return single_instance; 
+    } 
     public double getMoyenne() {
 	return moyenne;
     }
@@ -45,4 +57,15 @@ public class Eleve {
     public String toString() {
 	return nom + " (" + (int)(100 * moyenne)/100.0 + ")";
     }
+    public static void main(String[] arg) {
+            
+ Eleve x = Eleve.getInstance("pierre",12); 
+  
+        // instantiating Eleve class with variable y 
+        Eleve y = Eleve.getInstance("Alain",20); 
+  
+        // instantiating Eleve class with variable z 
+        Eleve z = Eleve.getInstance("Adan",15); 
+        System.out.println(x.nom);
+	}
 }
